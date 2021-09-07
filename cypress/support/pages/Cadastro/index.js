@@ -41,13 +41,14 @@ class CriterioDeAceitacao {
 
     validarEmail() {
         // Inserção de dados para cadastro com E-mail inválido.
-        cy.get(el.name).type('Ben-Hur Jeffer');
+        cy.wait(200);
+        cy.get(el.name).type('BenHur Jeffer');
         cy.get(el.email).type('beiujeffer@');
         cy.get(el.password).type('TST12345678');
         cy.get(el.cadastrar).click();
         cy.wait(200);
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
-        contains(el.error, /^Por favor, insira um e-mail válido./)
+        contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
     }
 
     validarSenha() {
