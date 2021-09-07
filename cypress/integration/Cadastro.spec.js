@@ -39,4 +39,3 @@ describe('Critérios de aceitação', () => {
     });
         
 });
-
