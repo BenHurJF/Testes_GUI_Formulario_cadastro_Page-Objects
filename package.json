@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BenHurJF/Projeto-Stefanini/issues"
   },
-  "homepage": "https://github.com/BenHurJF/Projeto-Stefanini#readme"
+  "homepage": "https://github.com/BenHurJF/Projeto-Stefanini#readme",
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
 }
