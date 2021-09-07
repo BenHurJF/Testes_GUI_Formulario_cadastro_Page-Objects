@@ -1,0 +1,19 @@
+{
+  "name": "projeto-stefanini",
+  "version": "1.0.0",
+  "description": "Prova prática Automação Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenHurJF/Projeto-Stefanini.git"
+  },
+  "author": "Ben-Hur Jeffer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenHurJF/Projeto-Stefanini/issues"
+  },
+  "homepage": "https://github.com/BenHurJF/Projeto-Stefanini#readme"
+}
