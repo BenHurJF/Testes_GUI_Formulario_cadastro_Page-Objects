@@ -35,7 +35,8 @@ describe('Critérios de aceitação', () => {
     it('Validar senha', () => {
         // Preenchendo campo senha com menos de 8 caracteres
         // sistema deve exibir a mensagem "A senha deve conter ao menos 8 caracteres."
-        
+        CriterioDeAceitacao.acessarCadastro();
+        CriterioDeAceitacao.validarSenha();
     });
         
 });

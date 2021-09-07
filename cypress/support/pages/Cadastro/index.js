@@ -28,32 +28,39 @@ class CriterioDeAceitacao {
 
     validarNomeCompleto() {
         // Inserção de dados para cadastro com apenas primeiro nome.
-        cy.get(el.name).type('BenHur');
-        cy.get(el.email).type('beiujeffer@hotmail.com');
-        cy.get(el.password).type('TST12345678');
-        cy.get(el.cadastrar).click();
-        cy.wait(200);
+        insercaoCamposCadastro();
         // Validar mensagem de erro -> "Por favor, insira um nome completo."
         cy.contains(el.error, /^Por favor, insira um nome completo./).should('be.visible');
     }
 
     validarEmail() {
         // Inserção de dados para cadastro com E-mail inválido.
-        cy.wait(200);
-        cy.get(el.name).type('BenHur Jeffer');
+        insercaoCamposCadastro();
+        cy.get(el.email).clear();
+        cy.get(el.name).type(' Jeffer');
         cy.get(el.email).type('beiujeffer@');
-        cy.get(el.password).type('TST12345678');
-        cy.get(el.cadastrar).click();
-        cy.wait(200);
+        //const email = cy.get(el.email).type('beiujeffer@');
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
         cy.contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
      }
 
     validarSenha() {
-        
+        insercaoCamposCadastro();
+        cy.get(el.name).type(' Jeffer');
+        cy.get(el.password).clear();
+        cy.get(el.password).type('123');
         // Validar mensagem de erro -> "A senha deve conter ao menos 8 caracteres."
-        
+        cy.contains(el.error, /^A senha deve conter ao menos 8 caracteres./).should('be.visible');
     }
 }
 
 export default new CriterioDeAceitacao();
+
+/// Dados
+function insercaoCamposCadastro() {
+        cy.get(el.name).type('BenHur');
+        cy.get(el.email).type('beiujeffer@hotmail.com');
+        cy.get(el.password).type('TST12345678');
+        cy.get(el.cadastrar).click();
+        cy.wait(200);
+}
