@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import CriterioDeAceitacao from '../support/Cadastro/index.js';
 
 
 describe('Acessar página de cadastro', () => {
@@ -8,18 +9,12 @@ describe('Acessar página de cadastro', () => {
    
     it('Asserções campos vazios formulário Cadastro', () => {
         // Validando se os campos do Formulário inicialmente estão vazios e visíveis.
-        cy.contains('#name', /^/).should('be.visible');
-        cy.contains('#email', /^/).should('be.visible');
-        cy.contains('#password', /^/).should('be.visible');
+        CriterioDeAceitacao.validarCriteriosCamposVazios();
     });
 
     it('Asserção Mensagem de campos obrigatórios', () => {
         // Validando se após eu clicar na opção Cadastrar sem preencher os campos exibe mensagem de erro.
-        cy.wait(500);
-        cy.get('#register').click();
-        cy.contains('.error', /^O campo Nome é obrigatório./).should('be.visible');
-        cy.contains('.error', /^O campo E-mail é obrigatório./).should('be.visible');
-        cy.contains('.error', /^O campo Senha é obrigatório./).should('be.visible');
+        CriterioDeAceitacao.validarMensagemCamposObrigatorios();
     });
 });
 

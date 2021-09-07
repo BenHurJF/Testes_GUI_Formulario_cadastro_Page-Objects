@@ -9,7 +9,7 @@ class CriterioDeAceitacao {
         cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
     }
 
-    validarCriteriosCampos(){
+    validarCriteriosCamposVazios(){
         cy.contains('#name', /^/).should('be.visible');
         cy.contains('#email', /^/).should('be.visible');
         cy.contains('#password', /^/).should('be.visible');
