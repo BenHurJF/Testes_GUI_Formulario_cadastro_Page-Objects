@@ -28,6 +28,7 @@ describe('Critérios de aceitação', () => {
     it('Validar E-mail', () => {
         // Preenchendo campo E-mail com um e-mail inválido
         // sistema deve exibir a mensagem "Por favor, insira um e-mail válido."
+        CriterioDeAceitacao.acessarCadastro();
         CriterioDeAceitacao.validarEmail();
     }); 
 
