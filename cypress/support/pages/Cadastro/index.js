@@ -52,11 +52,12 @@ class CriterioDeAceitacao {
         // Validar mensagem de erro -> "A senha deve conter ao menos 8 caracteres."
         cy.contains(el.error, /^A senha deve conter ao menos 8 caracteres./).should('be.visible');
     }
+
 }
 
 export default new CriterioDeAceitacao();
 
-/// Dados
+/// Functions para organização e boa estrutura de código.
 function insercaoCamposCadastro() {
         cy.get(el.name).type('BenHur');
         cy.get(el.email).type('beiujeffer@hotmail.com');
