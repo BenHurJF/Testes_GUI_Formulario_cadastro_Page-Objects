@@ -48,7 +48,7 @@ class CriterioDeAceitacao {
         cy.get(el.cadastrar).click();
         cy.wait(200);
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
-        contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
+        cy.contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
     }
 
     validarSenha() {
