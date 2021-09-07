@@ -44,6 +44,7 @@ describe('Cadastrar usuário', () => {
          CriterioDeAceitacao.acessarCadastro();
          //Cadastrar.Cadastrar();
      });
+
 });
         
 });

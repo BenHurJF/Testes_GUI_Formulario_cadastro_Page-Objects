@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BenHurJF/Projeto-Stefanini#readme",
   "devDependencies": {
-    "cypress": "^5.6.0"
+    "cypress": "^5.6.0",
+    "cypress-cucumber-preprocessor": "^4.2.0"
   }
 }
