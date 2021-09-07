@@ -1,7 +1,5 @@
 // Ações de interação com a página
 
-import { contains } from 'cypress/types/jquery';
-
 // Ação -> Critérios de Aceitação
 // Campos -> Nome, E-mail e Senha tem que estar vazio.
 // Quando eu acionar a opção Cadastrar sem preencher algum dos campos obrigatórios, sistema exibe mensagem de erro para cada um dos campos.
@@ -49,7 +47,7 @@ class CriterioDeAceitacao {
         cy.wait(200);
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
         cy.contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
-    }
+     }
 
     validarSenha() {
         
