@@ -9,8 +9,18 @@ class CriterioDeAceitacao {
         cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
     }
 
-    validarCampos(){
-        
+    validarCriteriosCampos(){
+        cy.contains('#name', /^/).should('be.visible');
+        cy.contains('#email', /^/).should('be.visible');
+        cy.contains('#password', /^/).should('be.visible');
+    }
+
+    validarMensagemCamposObrigatorios(){
+        cy.wait(500);
+        cy.get('#register').click();
+        cy.contains('.error', /^O campo Nome é obrigatório./).should('be.visible');
+        cy.contains('.error', /^O campo E-mail é obrigatório./).should('be.visible');
+        cy.contains('.error', /^O campo Senha é obrigatório./).should('be.visible');
     }
 }
 
