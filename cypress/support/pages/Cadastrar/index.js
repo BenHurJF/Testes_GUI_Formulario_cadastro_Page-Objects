@@ -1,7 +1,7 @@
 const element = require('./elements').ELEMENTS;
 
-class Cadastrar { 
+class CadastrarUsuario { 
 
 }
 
-export default new Cadastrar();
+export default new CadastrarUsuario();

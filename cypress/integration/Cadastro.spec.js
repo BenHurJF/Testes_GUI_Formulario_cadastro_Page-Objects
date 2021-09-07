@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import CriterioDeAceitacao from '../support/pages/PaginaCadastroAsserts/';
+//import CadastrarUsuario from '../support/pages/Cadastrar/';
 
 describe('Acessar página de cadastro', () => {
     it('Acessar home Cadastro', () => { 
@@ -37,5 +38,12 @@ describe('Critérios de aceitação', () => {
         CriterioDeAceitacao.acessarCadastro();
         CriterioDeAceitacao.validarSenha();
     });
+
+describe('Cadastrar usuário', () => {
+     it('Preencher campos com dados válidos', () => {
+         CriterioDeAceitacao.acessarCadastro();
+         //Cadastrar.Cadastrar();
+     });
+});
         
 });
