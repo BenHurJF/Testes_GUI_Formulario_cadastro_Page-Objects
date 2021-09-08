@@ -2,5 +2,17 @@
     "chromeWebSecurity": false,
     "testFiles": "**/*.feature",
 
-    "defaultComandTimeout": 8000
+    "defaultComandTimeout": 8000,
+
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "reportTitle": "Relatório Cadastro",
+        "cdn": true,
+        "charts": true
+    }
 }

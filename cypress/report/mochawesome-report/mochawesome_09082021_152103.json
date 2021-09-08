@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-08T18:20:50.838Z",
+    "end": "2021-09-08T18:21:03.059Z",
+    "duration": 12221,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee25c9a6-4d44-4565-a997-4d7b8d1c9ac2",
+      "title": "",
+      "fullFile": "cypress\\integration\\AssertsFormulario.feature",
+      "file": "cypress\\integration\\AssertsFormulario.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+          "title": "AssertsFormulario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu acessar o sistema devo visualizar os campos com valor inicial vazio.",
+              "fullTitle": "AssertsFormulario Quando eu acessar o sistema devo visualizar os campos com valor inicial vazio.",
+              "timedOut": null,
+              "duration": 1780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9ed8e025-76d4-4939-8a5f-ce3b767179a5",
+              "parentUUID": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando eu acionar a opção Cadastrar sem preencher os campos, o sistema exibe uma mensagem de erro para cada um dos campos.",
+              "fullTitle": "AssertsFormulario Quando eu acionar a opção Cadastrar sem preencher os campos, o sistema exibe uma mensagem de erro para cada um dos campos.",
+              "timedOut": null,
+              "duration": 616,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "c1406375-7ab5-4b37-bbb3-7fb3f61ade4a",
+              "parentUUID": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando eu acionar a opção Cadastrar tendo preenchido o campo Nome com apenas o primeiro nome, o sistema exibe a mensagem \"Por favor, insira um nome completo.\" para o campo Nome.",
+              "fullTitle": "AssertsFormulario Quando eu acionar a opção Cadastrar tendo preenchido o campo Nome com apenas o primeiro nome, o sistema exibe a mensagem \"Por favor, insira um nome completo.\" para o campo Nome.",
+              "timedOut": null,
+              "duration": 1299,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "21b57e5b-ed05-498c-add5-4f226537c8db",
+              "parentUUID": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando eu acionar a opção Cadastrar tendo preenchido o campo E-mail com um e-mail inválido, o sistema deve exibir a mensagem \"Por favor, insira um e-mail válido.\" Para o campo E-mail.",
+              "fullTitle": "AssertsFormulario Quando eu acionar a opção Cadastrar tendo preenchido o campo E-mail com um e-mail inválido, o sistema deve exibir a mensagem \"Por favor, insira um e-mail válido.\" Para o campo E-mail.",
+              "timedOut": null,
+              "duration": 2758,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9dc55943-61fc-4028-9748-c1332118cb09",
+              "parentUUID": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando eu acionar a opção Cadastrar tendo preenchido o campo Senha com um menos de 8 caracteres, o sistema deve exibir a mensagem \"A senha deve conter ao menos 8 caracteres.\" Para o campo Senha.",
+              "fullTitle": "AssertsFormulario Quando eu acionar a opção Cadastrar tendo preenchido o campo Senha com um menos de 8 caracteres, o sistema deve exibir a mensagem \"A senha deve conter ao menos 8 caracteres.\" Para o campo Senha.",
+              "timedOut": null,
+              "duration": 2033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "88d572e0-720f-4100-b548-62f17c5ed713",
+              "parentUUID": "ad8414ec-086f-46ce-b47b-dfd508b5243a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ed8e025-76d4-4939-8a5f-ce3b767179a5",
+            "c1406375-7ab5-4b37-bbb3-7fb3f61ade4a",
+            "21b57e5b-ed05-498c-add5-4f226537c8db",
+            "9dc55943-61fc-4028-9748-c1332118cb09",
+            "88d572e0-720f-4100-b548-62f17c5ed713"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "reportTitle": "Relatório Cadastro",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
