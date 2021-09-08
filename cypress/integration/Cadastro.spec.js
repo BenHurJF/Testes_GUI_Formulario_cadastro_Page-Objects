@@ -39,13 +39,13 @@ describe('Critérios de aceitação', () => {
         CriterioDeAceitacao.validarSenha();
     });
 
-describe('Cadastrar usuário', () => {
+describe('Cadastrar usuário', () => { ////// OK
      it('Preencher campos com dados válidos e Cadastrar', () => {
          // Cadastrar usuário
         CadastrarUsuario.cadastrarUsuario();
      });
 
-     it('Validar usuário cadastrado', () => {
+     it('Validar usuário cadastrado', () => { ////// OK
          // Validar usuário
          CadastrarUsuario.validarCadastro();
      });

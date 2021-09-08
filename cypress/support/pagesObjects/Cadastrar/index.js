@@ -12,7 +12,7 @@ class CadastrarUsuario {
       }    
 
       excluirUsuario() {
-          excluirUser(alert('Usuário Removido!'));
+          excluirUser(alert('Usuário excluído com sucesso!'));
       }
 }
 
