@@ -14,4 +14,11 @@ Cenário: Quando eu acionar a opção Cadastrar sem preencher os campos, o siste
   Quando Eu acionar a opção cadastrar sem preencher os campos obrigatórios exibe mensagem de erro
 
 Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo Nome com apenas o primeiro nome, o sistema exibe a mensagem "Por favor, insira um nome completo." para o campo Nome.
-  Given que eu acione
+  Quando Eu acionar a opção cadastrar com apenas o primeiro nome, o sistema exibe a mensagem mensagem - Por favor, insira um nome completo.
+
+Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo E-mail com um e-mail inválido, o sistema deve exibir a mensagem "Por favor, insira um e-mail válido." Para o campo E-mail.
+   Quando Eu acionar a opção cadastrar tendo preenchido o campo E-mail com um email inválido, sistema exibe mensagem - Por favor, insira um e-mail válido.
+
+Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo Senha com um menos de 8 caracteres, o sistema deve exibir a mensagem "A senha deve conter ao menos 8 caracteres." Para o campo Senha.
+   Quando Eu acionar a opção cadastrar tendo preenchido o campo senha com menos de 8 caracteres, sistema exibe mensagem - A senha deve conter ao menos 8 caracteres.
+
