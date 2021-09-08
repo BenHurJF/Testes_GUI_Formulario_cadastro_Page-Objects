@@ -14,3 +14,8 @@ Cenário: Quando eu cadastrar um usuário quero validar se os dados fornecidos e
 
 Cenário: Quando eu acionar a opção Excluir de um elemento da tabela de usuários, o sistema deve excluir a linha em questão, exibindo a tabela sem interferir nos ids dos demais itens e em sua ordenação.
   Quando Eu acionar a opção Excluir de um elemento da tabela de usuários, sistema exclui a linha em questão do cadastro.
+
+
+  Exemplos:
+  | Cadastro | Nome             | E-mail            | Senha     |
+  |    -     | Nome SegundoNome | teste@hotmail.com | teste1234 |
