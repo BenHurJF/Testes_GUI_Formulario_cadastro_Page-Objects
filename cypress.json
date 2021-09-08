@@ -3,14 +3,5 @@
     "testFiles": "**/*.feature",
 
     "defaultComandTimeout": 8000,
-    
-    "reporter": "cypress-mochawesome-reporter",
-    "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "charts": true,
-    "reportPageTitle": "Relatório Testes",
-    "embeddedScreenshots": true,
-    "inlineAssets": true
-  },
-  "video": false
+    "video": false
 }
