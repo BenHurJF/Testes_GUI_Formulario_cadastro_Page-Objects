@@ -8,7 +8,7 @@
     "reporterOptions": {
     "reportDir": "cypress/reports",
     "charts": true,
-    "reportPageTitle": "My Test Suite",
+    "reportPageTitle": "Relatório Testes",
     "embeddedScreenshots": true,
     "inlineAssets": true
   },
