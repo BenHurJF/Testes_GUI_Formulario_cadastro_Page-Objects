@@ -6,6 +6,8 @@ Funcionalidade: AssertsFormulario
    DESEJO realizar o cadastro de novos usuários
    PARA QUE seja possível armazenar e gerenciar seus dados
 
+Contexto: Ao acessar a url em que o sistema está hospedado, o usuário deverá visualizar uma tela que será utilizada para o cadastro de novos usuários. A tela deverá conter uma descrição sobre sua finalidade, os campos para preenchimento de Nome, E-mail e Senha do usuário a ser cadastrado e a opção para cadastrar que, quando acionada, irá exibir os dados do novo usuário em uma tabela abaixo dos campos anteriormente citados, Validação dos critérios de aceitação.
+
 Cenário: Quando eu acessar o sistema devo visualizar os campos com valor inicial vazio.
   Dado que eu acesse o sistema
   Entao eu visualizo os campos do formulário com valor inicial vazio
