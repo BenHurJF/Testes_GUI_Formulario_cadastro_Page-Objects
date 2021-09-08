@@ -23,5 +23,6 @@ module.exports = (on, config) => {
 const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = (on, config) => {
+  on('after:screenshot' , require('cypress-mochawesome-reporter/plugin'))
   on('file:preprocessor', cucumber())
 }
