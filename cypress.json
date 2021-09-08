@@ -1,4 +1,14 @@
 {
     "chromeWebSecurity": false,
-    "testFiles": "**/*.feature"
+    "testFiles": "**/*.feature",
+    
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true,
+    "inlineAssets": true
+  },
+  "video": false
 }
