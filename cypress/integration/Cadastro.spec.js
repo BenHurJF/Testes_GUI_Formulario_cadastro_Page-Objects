@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import CriterioDeAceitacao from '../support/pages/PaginaCadastroAsserts/';
-import CadastrarUsuario from '../support/pages/Cadastrar/';
+import CriterioDeAceitacao from '../support/pagesObjects/PaginaCadastroAsserts';
+import CadastrarUsuario from '../support/pagesObjects/Cadastrar';
 
 describe('Acessar página de cadastro', () => {
     it('Acessar home Cadastro', () => { 
