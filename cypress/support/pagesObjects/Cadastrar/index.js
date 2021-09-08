@@ -8,11 +8,11 @@ class CadastrarUsuario {
       }
 
       validarCadastro() {
-          validarUser(alert('Usuário validado!'));
+          validarUser();
       }    
 
       excluirUsuario() {
-          excluirUser(alert('Usuário excluído com sucesso!'));
+          excluirUser();
       }
 }
 
