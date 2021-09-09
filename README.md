@@ -1,4 +1,4 @@
-# Projeto-Stefanini
+# Projeto-Stefanini  - CYPRESS
  Prova prática - Automation Testing
  
  Utilização
