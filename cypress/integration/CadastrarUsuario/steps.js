@@ -3,16 +3,20 @@ import CadastrarUsuario from '../../support/pagesObjects/Cadastrar/index.js';
 
 // CADASTRAR USUÁRIO - VALIDAR USUÁRIO - EXCLUIR USUÁRIO
 
-When(/^Eu acionar a opção cadastrar e os campos estiverem preenchidos com dados válidos, sistema exibe abaixo do formulário uma tabela com os dados do usuário informados anteriormente e a opção Excluir.$/, () => {
+When(/^Eu acionar a opção cadastrar, o sistema exibe abaixo do form as info do usuário.$/, () => {
 	CadastrarUsuario.cadastrarUsuario();
 });
 
 
-Given(/^que o usuário é cadastrado com sucesso, quero validar os dados exibidos na tabela abaixo do formulário.$/, () => {
+Given(/^que o usuário é cadastrado, quero validar os dados exibidos na tela.$/, () => {
 	CadastrarUsuario.validarCadastro();
 });
 
 
-When(/^Eu acionar a opção Excluir de um elemento da tabela de usuários, sistema exclui a linha em questão do cadastro.$/, () => {
+Given(/^que eu acione a opção excluir$/, () => {
+	CadastrarUsuario.selectButtonExcluir();
+});
+
+Then(/^o sistema exclui o usuário da tabela.$/, () => {
 	CadastrarUsuario.excluirUsuario();
 });
