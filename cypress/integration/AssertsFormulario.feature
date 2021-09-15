@@ -2,25 +2,36 @@
 
 Funcionalidade: AssertsFormulario
 
-   EU COMO usuário do sistema
-   DESEJO realizar o cadastro de novos usuários
-   PARA QUE seja possível armazenar e gerenciar seus dados
+   EU COMO usuário do sistema 
+   DESEJO validar as regras de negócio
+   PARA QUE o sistema esteja de acordo com especificação
 
-Contexto: Ao acessar a url em que o sistema está hospedado, o usuário deverá visualizar uma tela que será utilizada para o cadastro de novos usuários. A tela deverá conter uma descrição sobre sua finalidade, os campos para preenchimento de Nome, E-mail e Senha do usuário a ser cadastrado e a opção para cadastrar que, quando acionada, irá exibir os dados do novo usuário em uma tabela abaixo dos campos anteriormente citados, Validação dos critérios de aceitação.
+Contexto: Dado que eu acesso a Tela de Cadastro
 
-Cenário: Quando eu acessar o sistema devo visualizar os campos com valor inicial vazio.
+Cenário: Qunado eu acessar o sistema os campos devem estar com valor vazio
   Dado que eu acesse o sistema
-  Entao eu visualizo os campos do formulário com valor inicial vazio
+  E tenha os seguintes campos Nome, E-mail e Senha
+  Então os campos devem estar com valor vazio
 
-Cenário: Quando eu acionar a opção Cadastrar sem preencher os campos, o sistema exibe uma mensagem de erro para cada um dos campos.
-  Quando Eu acionar a opção cadastrar sem preencher os campos obrigatórios exibe mensagem de erro
+Cenário: Acionar a opção cadastrar sem preencher os campos, deve exibir hint de erro
+  Dado que eu não preencha nenhum campo
+  E eu acione o botão cadastrar
+  Então sistema exibe hint de erro em cada campo
 
-Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo Nome com apenas o primeiro nome, o sistema exibe a mensagem "Por favor, insira um nome completo." para o campo Nome.
-  Quando Eu acionar a opção cadastrar com apenas o primeiro nome, o sistema exibe a mensagem mensagem - Por favor, insira um nome completo.
+Cenário: Dado que eu preencha o campo nome com apenas o 1° nome, sistema exibe hint de erro
+  Dado que eu preencha o campo nome com apenas o 1° nome
+  E que eu preencha os demais campos
+  Quando eu acionar a opção cadastrar
+  Então sistema exibe hint de erro no campo nome
 
-Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo E-mail com um e-mail inválido, o sistema deve exibir a mensagem "Por favor, insira um e-mail válido." Para o campo E-mail.
-   Quando Eu acionar a opção cadastrar tendo preenchido o campo E-mail com um email inválido, sistema exibe mensagem - Por favor, insira um e-mail válido.
+Cenário: Dado que eu preencha o campo E-mail com um inválido, sistema exibe hint de erro
+   Dado que eu preencha o campo e-mail com um inválido
+   E que eu preencha os demais campos
+   Quando eu acionar a opção cadastrar
+   Então sistema exibe hint de erro no campo e-mail
 
-Cenário: Quando eu acionar a opção Cadastrar tendo preenchido o campo Senha com um menos de 8 caracteres, o sistema deve exibir a mensagem "A senha deve conter ao menos 8 caracteres." Para o campo Senha.
-   Quando Eu acionar a opção cadastrar tendo preenchido o campo senha com menos de 8 caracteres, sistema exibe mensagem - A senha deve conter ao menos 8 caracteres.
-
+Cenário: Dado que eu preencha o campo senha com uma inválida, sistema exibe hint de erro
+   Dado que eu preencha o campo senha com menos de 8 caracteres
+   E que eu preencha os demais campos
+   Quando eu acionar a opção cadastrar
+   Então sistema exibe hint de erro no campo Senha

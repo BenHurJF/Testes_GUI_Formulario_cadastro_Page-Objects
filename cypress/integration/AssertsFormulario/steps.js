@@ -1,33 +1,87 @@
 /// <reference types="cypress" />
-import CriterioDeAceitacao from '../../support/pagesObjects/PaginaCadastroAsserts/index.js';
+import Assert from '../../support/pagesObjects/PaginaCadastroAsserts/index.js';
+
 
 Given(/^que eu acesse o sistema$/, () => {
-	CriterioDeAceitacao.acessarCadastro();
+	Assert.acessar();
 });
 
-Then(/^eu visualizo os campos do formulário com valor inicial vazio$/, () => {
-	CriterioDeAceitacao.validarCriteriosCamposVazios();
+And(/^tenha os seguintes campos Nome, E-mail e Senha$/, () => {
+	Assert.campos();
 });
 
-//
-
-When(/^Eu acionar a opção cadastrar sem preencher os campos obrigatórios exibe mensagem de erro$/, () => {
-	CriterioDeAceitacao.validarMensagemCamposObrigatorios();
-});
-
-
-When(/^Eu acionar a opção cadastrar com apenas o primeiro nome, o sistema exibe a mensagem mensagem - Por favor, insira um nome completo.$/, () => {
-	CriterioDeAceitacao.validarNomeCompleto();
+Then(/^os campos devem estar com valor vazio$/, () => {
+	Assert.Vazios();
 });
 
 
-When(/^Eu acionar a opção cadastrar tendo preenchido o campo E-mail com um email inválido, sistema exibe mensagem - Por favor, insira um e-mail válido.$/, () => {
-	CriterioDeAceitacao.acessarCadastro();
-    CriterioDeAceitacao.validarEmail();
+/// SEM PREENCHER OS CAMPOS OBRIGATORIOS
+
+Given(/^que eu não preencha nenhum campo$/, () => {
+	Assert.campos();
+});
+
+And(/^eu acione o botão cadastrar$/, () => {
+	Assert.btnCadastrar();
+});
+
+Then(/^sistema exibe mensagem de erro em cada campo$/, () => {
+	Assert.Obrigatorios();
 });
 
 
-When(/^Eu acionar a opção cadastrar tendo preenchido o campo senha com menos de 8 caracteres, sistema exibe mensagem - A senha deve conter ao menos 8 caracteres.$/, () => {
-	CriterioDeAceitacao.acessarCadastro();
-    CriterioDeAceitacao.validarSenha();
+/// PREENCHER APENAS O PRIMEIRO NOME
+
+Given(/^que eu preencha o campo nome com apenas o 1° nome$/, () => {
+	Assert.OneNome();
+});
+
+And(/^que eu preencha os demais campos$/, () => {
+	Assert.DemaisCampos();
+});
+
+When(/^eu acionar a opção cadastrar$/, () => {
+	Assert.btnCadastrar();
+});
+
+Then(/^sistema exibe hint de erro no campo nome$/, () => {
+	Assert.hintError();
+});
+
+
+/// E-MAIL INVALIDO
+
+Given(/^que eu preencha o campo e-mail com um inválido$/, () => {
+	Assert.email();
+});
+
+And(/^que eu preencha os demais campos$/, () => {
+	Assert.demaisCampos2();
+});
+
+When(/^eu acionar a opção cadastrar$/, () => {
+	Assert.btnCadastrar();
+});
+
+Then(/^sistema exibe hint de erro no campo e-mail$/, () => {
+	 Assert.hintError2();
+});
+
+
+/// SENHA INVALIDA
+
+Given(/^que eu preencha o campo senha com menos de 8 caracteres$/, () => {
+	Assert.senha();
+});
+
+And(/^que eu preencha os demais campos$/, () => {
+	Assert.demaisCampos3();
+});
+
+When(/^eu acionar a opção cadastrar$/, () => {
+	Assert.btnCadastrar();
+});
+
+Then(/^sistema exibe hint de erro no campo Senha$/, () => {
+	Assert.hintError3();
 });
