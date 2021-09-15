@@ -11,11 +11,11 @@ class Assert {
     acessar() {
         cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
     }
-    
+
     campos() {
-       cy.get(el.name);
-       cy.get(el.email);
-       cy.get(el.password);
+        cy.get(el.name).should('be.visible');
+        cy.get(el.email).should('be.visible');
+        cy.get(el.password).should('be.visible');
     }
 
     Vazios() {
@@ -23,20 +23,21 @@ class Assert {
         cy.contains(el.email, /^/).should('be.visible');
         cy.contains(el.password, /^/).should('be.visible');
     }
-    
+
     /// OBRIGATORIOS
 
     btnCadastrar() {
         cy.get(el.cadastrar).click();
-        cy.wait(200);
     }
 
     Obrigatorios() {
         cy.contains(el.error, /^O campo Nome é obrigatório./).should('be.visible');
         cy.contains(el.error, /^O campo E-mail é obrigatório./).should('be.visible');
         cy.contains(el.error, /^O campo Senha é obrigatório./).should('be.visible');
+        cy.wait(1000);
+        cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
     }
-    
+
     /// PRIMEIRO NOME
 
     OneNome() {
@@ -49,14 +50,16 @@ class Assert {
     }
 
     hintError() {
+        cy.wait(1000);
         // Validar mensagem de erro -> "Por favor, insira um nome completo."
         cy.contains(el.error, /^Por favor, insira um nome completo./).should('be.visible');
-        cy.wait(200);
+        cy.wait(1000);
     }
-    
+
     /// E-MAIL INVALIDO
 
     email() {
+        cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
         cy.get(el.email).type('beiujeffer@122');
     }
 
@@ -64,24 +67,36 @@ class Assert {
         cy.get(el.name).type('Ben-Hur Jeffer');
         cy.get(el.password).type('TST12345678');
     }
-    
+
     hintError2() {
+        cy.wait(1000);
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
         cy.contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
+        cy.wait(1000);
     }
 
     /// SENHA INVALIDA
 
-    senha() {
-        cy.get(el.password).type('123');
+    limpar() {
+        cy.get(el.name).clear();
+        cy.get(el.email).clear();
+        cy.get(el.password).clear();
     }
 
-    demaisCampos3() {
+    senha() {
+        cy.get(el.password).type('1234');
+        cy.wait(1000);
+    }
+
+    demaisCamposSenha() {
         cy.get(el.name).type('Ben-Hur Jeffer');
+        cy.get(el.email).clear();
+
         cy.get(el.email).type('beiujeffer@hotmail.com');
     }
 
     hintError3() {
+        cy.wait(1000);
         // Validar mensagem de erro -> "A senha deve conter ao menos 8 caracteres."
         cy.contains(el.error, /^A senha deve conter ao menos 8 caracteres./).should('be.visible');
     }

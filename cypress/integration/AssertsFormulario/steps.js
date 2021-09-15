@@ -25,19 +25,19 @@ And(/^eu acione o botão cadastrar$/, () => {
 	Assert.btnCadastrar();
 });
 
-Then(/^sistema exibe mensagem de erro em cada campo$/, () => {
+Then(/^sistema exibe hint de erro em cada campo$/, () => {
 	Assert.Obrigatorios();
 });
 
 
 /// PREENCHER APENAS O PRIMEIRO NOME
 
-Given(/^que eu preencha o campo nome com apenas o 1° nome$/, () => {
-	Assert.OneNome();
+Given(/^que eu preencha os campos$/, () => {
+	Assert.DemaisCampos();
 });
 
-And(/^que eu preencha os demais campos$/, () => {
-	Assert.DemaisCampos();
+And(/^que eu preencha o campo nome com apenas o 1° nome$/, () => {
+	Assert.OneNome();
 });
 
 When(/^eu acionar a opção cadastrar$/, () => {
@@ -67,15 +67,14 @@ Then(/^sistema exibe hint de erro no campo e-mail$/, () => {
 	 Assert.hintError2();
 });
 
+// SENHA INVALIDA
 
-/// SENHA INVALIDA
-
-Given(/^que eu preencha o campo senha com menos de 8 caracteres$/, () => {
-	Assert.senha();
+Given(/^que eu preencha os campos$/, () => {
+	Assert.demaisCamposSenha();
 });
 
-And(/^que eu preencha os demais campos$/, () => {
-	Assert.demaisCampos3();
+And(/^que eu preencha o campo senha com menos de 8 caracteres$/, () => {
+	Assert.senha();
 });
 
 When(/^eu acionar a opção cadastrar$/, () => {

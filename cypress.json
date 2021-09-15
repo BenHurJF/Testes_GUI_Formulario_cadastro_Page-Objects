@@ -2,7 +2,7 @@
     "chromeWebSecurity": false,
     "testFiles": "**/*.feature",
 
-    "defaultComandTimeout": 8000,
+    "defaultComandTimeout": 10000,
 
     "reporter": "mochawesome",
     "reporterOptions": {
