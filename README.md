@@ -1,14 +1,16 @@
-# Projeto-Stefanini
- Prova prática - Automation Testing
+# Projeto-Stefanini  - CYPRESS
+ Prova técnica - Automation Testing
  
  Utilização
  
- Instale a dependência -> npm install -D cypress@5.6
+ Comando -> npm install
  
- Instale a dependência -> npm install -D cypress-cucumber-preprocessor
+ Caso não dê certo utilize o comando -> npm run cy:open
  
- ou -> npm install
+ RELATÓRIO: Se encontra no caminho -> Cypress/report/RELATÓRIO-SUITE-TESTES.html
  
- Rodar projeto Cypress -> npm ./node_modules/.bin/cypress open
+ Clique com o botão direito e em -> Open With Live Server, para abrir no navegador.
+ 
+ instale a extensão no VSCode -> Live Server
  
  Fim.
