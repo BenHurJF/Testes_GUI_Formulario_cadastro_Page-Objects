@@ -3,13 +3,13 @@ const element = require('./elements').ELEMENTS;
 
 class Cadastro { 
       acessar() {
-          cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
+          cy.visit(Cypress.env('url'));
       }
 
       preencher() {
-        cy.get(element.name).type('Ben-Hur Jeffer');
-        cy.get(element.email).type('beiujeffer@hotmail.com');
-        cy.get(element.password).type('Teste1234567');
+        cy.get(element.name).type(Cypress.env('name'));
+        cy.get(element.email).type(Cypress.env('email'));
+        cy.get(element.password).type(Cypress.env('passwordValido'));
       }
       
       click() {
@@ -23,9 +23,11 @@ class Cadastro {
        }
 
       usuarioAssert() {
+          let email = Cypress.env('email');
+          let nome = Cypress.env('name');
           cy.contains(element.id, /^1/).should('be.visible');
-          cy.contains(element.userName, /^Ben-Hur Jeffer/).should('be.visible');  //  se está visível -> ).should('be.visible');
-          cy.contains(element.userEmail, /^beiujeffer@hotmail.com/).should('be.visible'); // se está visível -> ).should('be.visible');
+          cy.contains(element.userName, nome).should('be.visible');  //  se está visível -> ).should('be.visible');
+          cy.contains(element.userEmail, email ).should('be.visible'); // se está visível -> ).should('be.visible');
       }    
 
        /// REMOVER USUARIO

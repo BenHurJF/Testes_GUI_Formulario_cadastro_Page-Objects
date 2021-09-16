@@ -19,7 +19,7 @@ Cenário: Acionar a opção cadastrar sem preencher os campos, deve exibir hint 
   Então sistema exibe hint de erro em cada campo
 
 Cenário: Dado que eu preencha o campo nome com apenas o 1° nome, sistema exibe hint de erro
-  Dado que eu preencha os campos
+  Dado que eu preencha os campos.
   E que eu preencha o campo nome com apenas o 1° nome
   Quando eu acionar a opção cadastrar
   Então sistema exibe hint de erro no campo nome

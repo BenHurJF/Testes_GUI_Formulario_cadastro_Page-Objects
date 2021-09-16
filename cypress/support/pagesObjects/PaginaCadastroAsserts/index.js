@@ -9,7 +9,7 @@ const el = require('./elements').ELEMENTS;
 class Assert {
 
     acessar() {
-        cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
+        cy.visit(Cypress.env('url'));
     }
 
     campos() {
@@ -34,65 +34,54 @@ class Assert {
         cy.contains(el.error, /^O campo Nome é obrigatório./).should('be.visible');
         cy.contains(el.error, /^O campo E-mail é obrigatório./).should('be.visible');
         cy.contains(el.error, /^O campo Senha é obrigatório./).should('be.visible');
-        cy.wait(1000);
-        cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
+        cy.visit(Cypress.env('url'));
     }
 
     /// PRIMEIRO NOME
 
     OneNome() {
-        cy.get(el.name).type('BenHur');
+        cy.get(el.name).type(Cypress.env('OneName'));
     }
 
     DemaisCampos() {
-        cy.get(el.email).type('beiujeffer@hotmail.com');
-        cy.get(el.password).type('TST12345678');
+        cy.get(el.email).type(Cypress.env('email'));
+        cy.get(el.password).type(Cypress.env('passwordValido'));
     }
 
     hintError() {
-        cy.wait(1000);
         // Validar mensagem de erro -> "Por favor, insira um nome completo."
         cy.contains(el.error, /^Por favor, insira um nome completo./).should('be.visible');
-        cy.wait(1000);
     }
 
     /// E-MAIL INVALIDO
 
     email() {
-        cy.visit('http://prova.stefanini-jgr.com.br/teste/qa/');
-        cy.get(el.email).type('beiujeffer@122');
+        cy.visit(Cypress.env('url'));
+        cy.get(el.email).type(Cypress.env('emailInvalido'));
     }
 
-    demaisCampos2() {
-        cy.get(el.name).type('Ben-Hur Jeffer');
-        cy.get(el.password).type('TST12345678');
+    camposEmail() {
+        cy.get(el.name).type(Cypress.env('name'));
+        cy.get(el.password).type(Cypress.env('password'));
     }
 
     hintError2() {
-        cy.wait(1000);
         // Validar mensagem de erro -> "Por favor, insira um e-mail válido."
         cy.contains(el.error, /^Por favor, insira um e-mail válido./).should('be.visible');
-        cy.wait(1000);
+        cy.visit(Cypress.env('url'));
     }
 
     /// SENHA INVALIDA
 
-    limpar() {
-        cy.get(el.name).clear();
-        cy.get(el.email).clear();
-        cy.get(el.password).clear();
-    }
-
     senha() {
-        cy.get(el.password).type('1234');
+        cy.get(el.password).type(Cypress.env('password'));
+        //cy.get(el.password).type('1234');
         cy.wait(1000);
     }
 
-    demaisCamposSenha() {
-        cy.get(el.name).type('Ben-Hur Jeffer');
-        cy.get(el.email).clear();
-
-        cy.get(el.email).type('beiujeffer@hotmail.com');
+    camposSenha() {
+        cy.get(el.name).type(Cypress.env('name'));
+        cy.get(el.email).type(Cypress.env('email'));
     }
 
     hintError3() {

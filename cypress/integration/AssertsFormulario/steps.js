@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 import Assert from '../../support/pagesObjects/PaginaCadastroAsserts/index.js';
 
-
 Given(/^que eu acesse o sistema$/, () => {
 	Assert.acessar();
 });
@@ -32,7 +31,7 @@ Then(/^sistema exibe hint de erro em cada campo$/, () => {
 
 /// PREENCHER APENAS O PRIMEIRO NOME
 
-Given(/^que eu preencha os campos$/, () => {
+Given(/^que eu preencha os campos.$/, () => {
 	Assert.DemaisCampos();
 });
 
@@ -56,7 +55,7 @@ Given(/^que eu preencha o campo e-mail com um inválido$/, () => {
 });
 
 And(/^que eu preencha os demais campos$/, () => {
-	Assert.demaisCampos2();
+	Assert.camposEmail();
 });
 
 When(/^eu acionar a opção cadastrar$/, () => {
@@ -64,13 +63,14 @@ When(/^eu acionar a opção cadastrar$/, () => {
 });
 
 Then(/^sistema exibe hint de erro no campo e-mail$/, () => {
-	 Assert.hintError2();
+	Assert.hintError2();
 });
+
 
 // SENHA INVALIDA
 
 Given(/^que eu preencha os campos$/, () => {
-	Assert.demaisCamposSenha();
+	Assert.camposSenha();
 });
 
 And(/^que eu preencha o campo senha com menos de 8 caracteres$/, () => {
