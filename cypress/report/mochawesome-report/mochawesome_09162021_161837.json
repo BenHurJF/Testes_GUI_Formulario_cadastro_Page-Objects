@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-16T19:18:23.093Z",
+    "end": "2021-09-16T19:18:37.971Z",
+    "duration": 14878,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d93cbbb6-b4cd-4605-a8a6-18ebd53e9489",
+      "title": "",
+      "fullFile": "cypress\\integration\\AssertsFormulario.feature",
+      "file": "cypress\\integration\\AssertsFormulario.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+          "title": "AssertsFormulario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu acessar o sistema os campos devem estar com valor vazio",
+              "fullTitle": "AssertsFormulario Quando eu acessar o sistema os campos devem estar com valor vazio",
+              "timedOut": null,
+              "duration": 3096,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "2564916c-3ded-4ad0-83d5-69bfbedc6f30",
+              "parentUUID": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Acionar a opção cadastrar sem preencher os campos, deve exibir hint de erro",
+              "fullTitle": "AssertsFormulario Acionar a opção cadastrar sem preencher os campos, deve exibir hint de erro",
+              "timedOut": null,
+              "duration": 1033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "1a9fc6e1-867c-4ab4-9f69-df403c8ae62f",
+              "parentUUID": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Dado que eu preencha o campo nome com apenas o 1° nome, sistema exibe hint de erro",
+              "fullTitle": "AssertsFormulario Dado que eu preencha o campo nome com apenas o 1° nome, sistema exibe hint de erro",
+              "timedOut": null,
+              "duration": 1750,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e02aa3b4-c79a-4176-b85d-779c6417c0e8",
+              "parentUUID": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Dado que eu preencha o campo E-mail com um inválido, sistema exibe hint de erro",
+              "fullTitle": "AssertsFormulario Dado que eu preencha o campo E-mail com um inválido, sistema exibe hint de erro",
+              "timedOut": null,
+              "duration": 1425,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d1eb2162-b9f5-48ae-b1a2-9ad16f0c7d59",
+              "parentUUID": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Dado que eu preencha o campo senha com uma inválida, sistema exibe hint de erro",
+              "fullTitle": "AssertsFormulario Dado que eu preencha o campo senha com uma inválida, sistema exibe hint de erro",
+              "timedOut": null,
+              "duration": 3194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e2491278-9656-4a5f-86ca-99b0fd3d8191",
+              "parentUUID": "a393ffdc-9489-429c-a5d8-fd9c5893dd77",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2564916c-3ded-4ad0-83d5-69bfbedc6f30",
+            "1a9fc6e1-867c-4ab4-9f69-df403c8ae62f",
+            "e02aa3b4-c79a-4176-b85d-779c6417c0e8",
+            "d1eb2162-b9f5-48ae-b1a2-9ad16f0c7d59",
+            "e2491278-9656-4a5f-86ca-99b0fd3d8191"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10498,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "reportTitle": "Relatório Cadastro",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
