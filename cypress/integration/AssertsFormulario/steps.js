@@ -2,7 +2,7 @@
 import Assert from '../../support/pagesObjects/PaginaCadastroAsserts/index.js';
 
 Given(/^que eu acesse o sistema$/, () => {
-	Assert.acessar();
+	Assert.acessoValido();
 });
 
 And(/^tenha os seguintes campos Nome, E-mail e Senha$/, () => {
