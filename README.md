@@ -1,6 +1,8 @@
 # Projeto-Stefanini  - CYPRESS
  Prova técnica - Automation Testing
  
+ Resumo: Automação de teste com cypress + Gherkin do cucumber. Testes numa tela de cadastro, validando critérios de aceite e Regras de negócio.
+ 
  Utilização
  
   -> npm install
