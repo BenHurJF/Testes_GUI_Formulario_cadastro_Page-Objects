@@ -15,6 +15,7 @@ class Assert {
     acessoValido() {
        cy.url()
        .should('be.equal', Cypress.env('url'));
+
     }
 
     campos() {
