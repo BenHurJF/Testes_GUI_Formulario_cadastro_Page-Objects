@@ -6,7 +6,8 @@ Funcionalidade: Cadastro de Usuário
    DESEJO realizar o cadastro de novos usuários
    PARA QUE seja possível armazenar e gerenciar seus dados
 
-Contexto: Dado que eu acesse a Tela de Cadastro
+Contexto: 
+Dado que eu acesse a Tela de Cadastro
 
 Cenário: Dado que eu cadastre um usuário, sistema deve exibe usuário em tabela
   Dado que eu acesse a Tela de cadastro
